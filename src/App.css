@@ -1,0 +1,121 @@
+body{
+    max-width: 1024px;
+    margin: auto;
+    /* padding: 0px 20px; */
+    
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.headerBox {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.banner{
+    width: 100%;
+    height: 50vh;
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.login {
+    position: fixed;
+    background-color: rgb(78, 78, 78);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    
+    place-content: center;
+}
+
+.login-form{
+    display: grid;
+    place-content: center;
+}
+
+.bodyBox{
+    margin: 50px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.card-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+.card-box:hover{
+    border: red solid 2px;
+}
+
+.card-explain{
+    display: flex;
+    gap: 20px
+}
+
+.card-image{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.description-box{
+    width: 50%;
+    margin: 10px;
+    
+}
+
+.card-description{
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    
+}
+
+.card-description.expando{
+    z-index: 9999;
+}
+
+.card-see-more{
+    position: relative;
+}
+
+.navigator{
+    position: relative;
+}
+
+.navigator-menu{
+    display: none;
+    position: absolute;
+    right: 50px;
+    background-color: white;
+    padding: 30px 30px;
+    border: salmon solid 1px;
+}
+
+.navigator-choices{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footerBox{
+    display: flex;
+    justify-content: center;
+}
