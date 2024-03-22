@@ -15,18 +15,6 @@ export default function Body() {
       .then((items) => setProducts(items));
   }, []);
 
-  // console.log(products);
-
-  const checkList = () => {
-    if (search === null) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-  // console.log(checkList())
-
   const renderFilter = () => {
     return search?.map((user) => (
       <Card
@@ -66,7 +54,7 @@ export default function Body() {
       ></input>
 
       <div className="bodyBox">
-        {checkList() ? renderMap() : renderFilter()}
+        {search === null ? renderMap() : renderFilter()}
       </div>
     </>
   );

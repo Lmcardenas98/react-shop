@@ -3,16 +3,15 @@ import Footer from "../layouts/Footer";
 import Head from "../layouts/Head";
 
 const Shop = () => {
-    return (
-        <>
-            <Head />
+  return (
+    <>
+      <Head />
 
-            <Body />
+      <Body />
 
-            <Footer />
-        </>
-    )
-}
-
+      <Footer />
+    </>
+  );
+};
 
 export default Shop;
