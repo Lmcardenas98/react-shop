@@ -11,6 +11,7 @@ export default function Navigator() {
         <div className="navigator-choices">
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
+          <Link to="/cart">cart</Link>
           <Link to="/about">About</Link>
         </div>
       </div>

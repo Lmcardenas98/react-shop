@@ -1,8 +1,14 @@
 import { useState } from "react";
-import BtnCart from "./BtnCart";
+import useProviderCart from "../hook/useProviderCart";
 
 export default function Card(props) {
   const [description, setDescription] = useState("");
+
+  const { cart, setCart } = useProviderCart();
+
+  const handleCart = (id) => {
+    setCart([...cart, id]);
+  };
 
   return (
     <div className="card-box">
@@ -29,7 +35,18 @@ export default function Card(props) {
             {props.descript}
           </p>
         </div>
-        <BtnCart />
+        <div className="btn-cart">
+          <button
+            style={{
+              display: window.location.pathname === "/cart" ? "none" : "block",
+            }}
+            onClick={() => {
+              handleCart(props.id);
+            }}
+          >
+            Agregar al carrito
+          </button>
+        </div>
       </div>
     </div>
   );

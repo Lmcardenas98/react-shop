@@ -1,24 +1,20 @@
 import { useEffect, useState } from "react";
 import Card from "../components/Cards";
-import { useRef } from "react";
+// import { useRef } from "react";
+import useProviderCart from "../hook/useProviderCart";
 
 export default function Body() {
   // const myRef = useRef();
   // const myRefVal = myRef.current.value;
   // console.log(myRefVal);
-  const [products, setProducts] = useState(null);
+  const { products, setProducts } = useProviderCart();
   const [search, setSearch] = useState(null);
-
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((items) => setProducts(items));
-  }, []);
 
   const renderFilter = () => {
     return search?.map((user) => (
       <Card
         key={user.id}
+        id={user.id}
         title={user.title}
         image={user.image}
         descript={user.description}
@@ -32,6 +28,7 @@ export default function Body() {
     return products?.map((user) => (
       <Card
         key={user.id}
+        id={user.id}
         title={user.title}
         image={user.image}
         descript={user.description}
