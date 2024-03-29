@@ -10,6 +10,10 @@ export default function Card(props) {
     setCart([...cart, id]);
   };
 
+  const removeFromCart = (id) => {
+    setCart(cart.filter((value) => value !== id));
+  };
+
   return (
     <div className="card-box">
       <div className="image-box">
@@ -44,7 +48,17 @@ export default function Card(props) {
               handleCart(props.id);
             }}
           >
-            Agregar al carrito
+            Add to cart
+          </button>
+          <button
+            style={{
+              display: window.location.pathname === "/cart" ? "block" : "none",
+            }}
+            onClick={() => {
+              removeFromCart(props.id);
+            }}
+          >
+            remove from cart
           </button>
         </div>
       </div>

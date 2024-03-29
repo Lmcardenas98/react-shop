@@ -3,8 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./pages/Cart.js";
 import About from "./pages/About.js";
 import Shop from "./pages/Shop.js";
+import Login from "./pages/Login.js";
 import Context from "./context/ContextProviderCart.js";
 import { useState, useEffect } from "react";
+import Home from "./pages/Home.js";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -22,7 +24,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route>
-              <Route index element={<Shop />} />
+              <Route index element={<Home />} />
               <Route path="/shop" element={<Shop />} />
               <Route path="/about" element={<About />} />
               <Route path="/cart" element={<Cart />} />

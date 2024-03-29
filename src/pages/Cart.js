@@ -8,12 +8,12 @@ import { useState } from "react";
 const Cart = () => {
   const { cart, setCart, products, setProducts } = useProviderCart();
   //   const [bridge, setBridge] = useState([]);
-  const algo = [];
+  const bridge = [];
 
   products?.filter((el) => {
     cart?.forEach((value) => {
       if (el.id === value) {
-        algo.push(el);
+        bridge.push(el);
       }
     });
   });
@@ -22,7 +22,10 @@ const Cart = () => {
     <>
       <Head />
       <div className="cart">
-        {algo.map((user) => (
+        <h1 style={{ display: bridge.length === 0 ? "block" : "none" }}>
+          nothing in the cart by this time
+        </h1>
+        {bridge.map((user) => (
           <Card
             key={user.id}
             id={user.id}

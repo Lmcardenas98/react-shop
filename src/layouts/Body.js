@@ -1,12 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Card from "../components/Cards";
-// import { useRef } from "react";
 import useProviderCart from "../hook/useProviderCart";
 
 export default function Body() {
-  // const myRef = useRef();
-  // const myRefVal = myRef.current.value;
-  // console.log(myRefVal);
   const { products, setProducts } = useProviderCart();
   const [search, setSearch] = useState(null);
 
