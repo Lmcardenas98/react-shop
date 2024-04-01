@@ -1,13 +1,10 @@
-import Body from "../layouts/Body";
-import Footer from "../layouts/Footer";
-import Head from "../layouts/Head";
 import useProviderCart from "../hook/useProviderCart";
 import Card from "../components/Cards";
-import { useState } from "react";
+import Layout from "./Layout";
 
 const Cart = () => {
-  const { cart, setCart, products, setProducts } = useProviderCart();
-  //   const [bridge, setBridge] = useState([]);
+  const { cart, products } = useProviderCart();
+
   const bridge = [];
 
   products?.filter((el) => {
@@ -19,26 +16,26 @@ const Cart = () => {
   });
 
   return (
-    <>
-      <Head />
+    <Layout>
       <div className="cart">
         <h1 style={{ display: bridge.length === 0 ? "block" : "none" }}>
           nothing in the cart by this time
         </h1>
-        {bridge.map((user) => (
-          <Card
-            key={user.id}
-            id={user.id}
-            title={user.title}
-            image={user.image}
-            descript={user.description}
-            category={user.category}
-            price={user.price}
-          />
-        ))}
+        <div className="bodyBox">
+          {bridge.map((user) => (
+            <Card
+              key={user.id}
+              id={user.id}
+              title={user.title}
+              image={user.image}
+              descript={user.description}
+              category={user.category}
+              price={user.price}
+            />
+          ))}
+        </div>
       </div>
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

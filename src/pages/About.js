@@ -1,7 +1,5 @@
 import { useReducer } from "react";
-import Footer from "../layouts/Footer";
-import Head from "../layouts/Head";
-import { useState } from "react";
+import Layout from "./Layout";
 
 const reducer = (state, action) => {
   return {
@@ -15,20 +13,19 @@ export default function About() {
 
   return (
     <>
-      <Head />
+      <Layout>
+        <h1>About</h1>
+        <button onClick={() => dispatch()}>subir</button>
+        <h1>{state.count}</h1>
 
-      <h1>About</h1>
-      <button onClick={() => dispatch()}>subir</button>
-      <h1>{state.count}</h1>
-
-      {/* <input
+        {/* <input
           type="checkbox"
           checked={theme === 'dark'}
           onChange={(e) => {
             setTheme(e.target.checked ? 'dark' : 'light')
           }}
         /> */}
-      <Footer />
+      </Layout>
     </>
   );
 }

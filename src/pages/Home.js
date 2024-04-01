@@ -1,13 +1,11 @@
-import Head from "../layouts/Head";
-import Body from "../layouts/Body";
-import Footer from "../layouts/Footer";
+import Layout from "./Layout";
 
 const Home = () => {
   return (
     <>
-      <Head />
-      <h1>home page</h1>
-      <Footer />
+      <Layout>
+        <h1>Home page</h1>
+      </Layout>
     </>
   );
 };

@@ -8,7 +8,6 @@ export default function Head() {
       <div className="head-banner">
         <img src={banner} alt="banner" className="banner"></img>
       </div>
-
       <div className="headerBox">
         <div className="imageHead">
           <img src={logo} alt="logo" className="logo" />

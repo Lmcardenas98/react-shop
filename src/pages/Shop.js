@@ -1,15 +1,12 @@
 import Body from "../layouts/Body";
-import Footer from "../layouts/Footer";
-import Head from "../layouts/Head";
+import Layout from "./Layout";
 
 const Shop = () => {
   return (
     <>
-      <Head />
-
-      <Body />
-
-      <Footer />
+      <Layout>
+        <Body />
+      </Layout>
     </>
   );
 };

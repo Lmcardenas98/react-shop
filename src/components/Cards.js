@@ -27,7 +27,6 @@ export default function Card(props) {
           <p className="card-category">{props.category}</p>
           <p className="card-price">{props.price}$</p>
         </div>
-        {/* este href expande el icono para mostrar la descripcion del elemento */}
         <div className="card-see-more">
           <a
             className="card-description-expand"
