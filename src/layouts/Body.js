@@ -1,42 +1,24 @@
-import { useState } from "react";
-import Card from "../components/Cards";
-import useProviderCart from "../hook/useProviderCart";
+import SectionTopCategories from "./bodySections/SectionTopCategories";
 
 export default function Body() {
-  const { products, setProducts } = useProviderCart();
-  const [search, setSearch] = useState(null);
-
-  const renderFilter = () => {
-    return search?.map((user) => (
-      <Card
-        key={user.id}
-        id={user.id}
-        title={user.title}
-        image={user.image}
-        descript={user.description}
-        category={user.category}
-        price={user.price}
-      />
-    ));
-  };
-
-  const renderMap = () => {
-    return products?.map((user) => (
-      <Card
-        key={user.id}
-        id={user.id}
-        title={user.title}
-        image={user.image}
-        descript={user.description}
-        category={user.category}
-        price={user.price}
-      />
-    ));
-  };
-
   return (
     <>
-      <input
+      <SectionTopCategories />
+      <div className="section-season-sale">
+        <div className="mask"></div>
+        <div className="season-sale-text">
+          <h1>End of Season sale</h1>
+          <p>
+            Take 25% off all sweaters and knits. Discount applied at checkout.
+          </p>
+          <button className="sale-btn">SHOP NOW</button>
+        </div>
+      </div>
+    </>
+  );
+}
+
+/* <input
         type="text"
         className="search-box"
         onChange={(e) =>
@@ -44,11 +26,4 @@ export default function Body() {
             products.filter((user) => user.category.includes(e.target.value))
           )
         }
-      ></input>
-
-      <div className="bodyBox">
-        {search === null ? renderMap() : renderFilter()}
-      </div>
-    </>
-  );
-}
+      ></input> */

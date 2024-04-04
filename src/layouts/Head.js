@@ -1,24 +1,23 @@
-import banner from "../media/banner.jpg";
 import logo from "../media/logo.jpg";
-import Navigator from "../components/Navigator";
+import Navigator from "../components/HeadComponents/Navigator";
+import useProviderCart from "../hook/useProviderCart";
+import Banner from "../components/HeadComponents/Banner";
 
 export default function Head() {
+  const { cart } = useProviderCart();
   return (
-    <div>
-      <div className="head-banner">
-        <img src={banner} alt="banner" className="banner"></img>
-      </div>
+    <div className="header-container">
       <div className="headerBox">
         <div className="imageHead">
           <img src={logo} alt="logo" className="logo" />
         </div>
 
-        <div className="siteName">
-          <h1>Sample Name</h1>
-        </div>
-
         <Navigator />
+        <div className="head-cart-items">
+          <b>cart items: {cart.length}</b>
+        </div>
       </div>
+      <Banner />
     </div>
   );
 }

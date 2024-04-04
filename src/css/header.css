@@ -1,0 +1,82 @@
+.navigator{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+}
+
+.navigator-menu{
+    display: none;
+    position: absolute;
+    /* right: 50px; */
+    top: 65px;
+    background-color: white;
+    padding: 30px 30px;
+    border: salmon solid 1px;
+}
+
+.navigator-choices{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.headerBox {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+
+.head-cart-items{
+    display: flex;
+    align-items: center;
+
+}
+
+.banner-container{
+    background-color: rgba(128, 128, 128, 0.091);
+    display: flex;
+    justify-content: center;
+}
+
+.head-banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    max-width: 1024px;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.banner-item-image{
+    max-width: 200px;
+    justify-self: center;
+    align-self: center;
+}
+
+.banner-image{
+    width: 100%;
+}
+
+.header-btn{
+    width: 170px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.header-btn:hover{
+    background-color: rgb(254, 130, 130);
+    cursor: pointer;
+    transition: all .2s;
+}
+

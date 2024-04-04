@@ -1,0 +1,209 @@
+
+:root {
+    --top-category-border: 1px rgb(228, 228, 228) solid;
+}
+
+/* top categories */
+
+.section-top-categories{
+
+}
+
+.body-top-categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.top-categories-description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-categorie-main{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.category-main-image{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.secondary-image-container:last-child{
+    border-right: none;
+}
+
+.category-secondary-image{
+    width: 50px;
+    height: 50px;
+    padding: 15px 15px 15px 15px;
+}
+
+.secondary-image-container{
+    border-right: var(--top-category-border);
+    display: grid;
+    place-content: center;
+}
+
+.secondary-image-container img{
+    /* aspect-ratio: 1, 1; */
+    object-fit: contain;
+}
+
+.top-categories-samples{
+    border-top: var(--top-category-border);
+    border-bottom: var(--top-category-border);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.top-categories-card{
+    border: var(--top-category-border);
+    width: 30%;
+    border-radius: 1%;
+}
+
+.top-categories-description{
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-categories-card img:hover{
+    scale: 1.2;
+    transition: all .3s;
+}
+
+.top-categories-btn{
+    border-radius: 100px;
+    width: 120px;
+    height: 35px;
+    border: var(--top-category-border);
+    background-color: transparent;
+}
+
+.top-categories-btn:hover{
+    transition: all .2s;
+    border: 1px red solid;
+    color: red;
+    cursor: pointer;
+}
+
+/* Season sale section  */
+
+.section-season-sale{
+   display: grid;
+   place-content: center;
+    background-image: url('../media/banner.jpg');
+    height: 30vh;
+    color: white;
+    position: relative;
+    width: 100%; 
+}
+
+.season-sale-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    gap: 15px;
+}
+
+.season-sale-text h1{
+    margin: 0;
+}
+
+.mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.454);
+}
+
+.sale-btn{
+    width: 170px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    font-weight: bold;
+}
+
+.sale-btn:hover{
+    background-color: rgb(255, 55, 55);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+
+/* body layouts */
+
+.bodyBox{
+    margin: 50px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 20px;   
+}
+
+.page-layouts{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    
+}
+
+.section-top-categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* card  */
+
+.card-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+.card-box:hover{
+    border: red solid 2px;
+}
+
+.card-explain{
+    display: flex;
+    gap: 20px
+}
+
+.card-image{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.description-box{
+    width: 50%;
+    margin: 10px;
+    
+}
+
+.card-description{
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    
+}
+
+.card-description.expando{
+    z-index: 9999;
+}
+
+.card-see-more{
+    position: relative;
+}

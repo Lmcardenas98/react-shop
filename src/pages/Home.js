@@ -1,10 +1,11 @@
+import Body from "../layouts/Body";
 import Layout from "./Layout";
 
 const Home = () => {
   return (
     <>
       <Layout>
-        <h1>Home page</h1>
+        <Body />
       </Layout>
     </>
   );
