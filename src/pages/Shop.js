@@ -4,8 +4,7 @@ import Card from "../components/Cards";
 import useProviderCart from "../hook/useProviderCart";
 
 const Shop = () => {
-  const [search, setSearch] = useState(null);
-  const { products } = useProviderCart();
+  const { products, search } = useProviderCart();
 
   const renderFilter = () => {
     return search?.map((user) => (

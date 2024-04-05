@@ -6,7 +6,7 @@
 /* top categories */
 
 .section-top-categories{
-
+    
 }
 
 .body-top-categories{
@@ -97,7 +97,7 @@
 .section-season-sale{
    display: grid;
    place-content: center;
-    background-image: url('../media/banner.jpg');
+    background-image: url('../media/newbanner.jpg');
     height: 30vh;
     color: white;
     position: relative;
@@ -136,6 +136,66 @@
     background-color: rgb(255, 55, 55);
     cursor: pointer;
     transition: all .3s;
+}
+
+
+/* section-top-collection */
+
+.top-collection-container{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.top-colection-cards-container{
+    display: flex;
+    max-width: 1024px;
+    /* overflow:hidden; */
+    gap: 50px;
+    align-items: center;
+    scroll-behavior: smooth;
+    animation: scroll 45s linear infinite;
+    animation-delay: 3s;
+}
+
+
+.section-top-collection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.collection-image-container{
+    display: flex;
+    justify-content: center;
+}
+
+.collection-card{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.collection-image{
+    max-width: 250px;
+    max-height: 204px;
+    object-fit: contain;
+}
+
+.collection-description{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.collection-descriptio-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -206,4 +266,18 @@
 
 .card-see-more{
     position: relative;
+}
+
+
+@keyframes scroll {
+    10%{margin-left: -73%}
+    20%{margin-left: -146%}
+    30%{margin-left: -219%}
+    40%{margin-left: -292%}
+    50%{margin-left: -365%}
+    60%{margin-left: -438%}
+    70%{margin-left: -511%}
+    80%{margin-left: -584%}
+    90%{margin-left: -657%}
+    100%{margin-left: -730%}
 }

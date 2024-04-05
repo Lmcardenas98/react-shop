@@ -7,13 +7,14 @@ export default function Banner() {
   const [item, setItem] = useState(null);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
+    const timeout = setInterval(() => {
       const random = Math.floor(Math.random() * 10);
       setItem(products?.filter((item) => item.id === random)[0]);
-    }, 10000);
-  });
+      console.log(item);
+    }, 5000);
+  }, []);
 
-  console.log(item);
+  // console.log(item);
   return (
     <div className="banner-container">
       <div className="head-banner">

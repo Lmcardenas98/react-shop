@@ -4,7 +4,8 @@ import useProviderCart from "../hook/useProviderCart";
 import Banner from "../components/HeadComponents/Banner";
 
 export default function Head() {
-  const { cart } = useProviderCart();
+  const { cart, setSearch, products } = useProviderCart();
+
   return (
     <div className="header-container">
       <div className="headerBox">
@@ -14,6 +15,20 @@ export default function Head() {
 
         <Navigator />
         <div className="head-cart-items">
+          <input
+            style={{
+              display: window.location.pathname === "/shop" ? "block" : "none",
+            }}
+            type="seacrch"
+            className="search-box"
+            onChange={(e) =>
+              setSearch(
+                products.filter((user) =>
+                  user.category.includes(e.target.value)
+                )
+              )
+            }
+          ></input>
           <b>cart items: {cart.length}</b>
         </div>
       </div>

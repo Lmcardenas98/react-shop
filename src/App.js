@@ -11,6 +11,7 @@ import Home from "./pages/Home.js";
 function App() {
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState(null);
+  const [search, setSearch] = useState(null);
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
@@ -18,7 +19,9 @@ function App() {
   }, []);
 
   return (
-    <Context.Provider value={{ cart, setCart, products, setProducts }}>
+    <Context.Provider
+      value={{ cart, setCart, products, setProducts, search, setSearch }}
+    >
       <div className="App">
         {/* <Login /> */}
         <BrowserRouter>

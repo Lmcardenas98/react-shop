@@ -77,6 +77,6 @@
 .header-btn:hover{
     background-color: rgb(254, 130, 130);
     cursor: pointer;
-    transition: all .2s;
+    transition: all .2 s;
 }
 
