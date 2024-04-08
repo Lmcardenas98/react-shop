@@ -5,10 +5,28 @@
     align-items: end;
 }
 
+.navigator:hover .navigator-menu{
+    animation: nav-hover .1s linear forwards;
+}
+
+@keyframes nav-hover {
+    10% {height: 10%;opacity: .1;}
+    20% {height: 20;opacity: .2;}
+    30% {height: 30%;opacity: .3;}
+    40% {height: 40%;opacity: .4;}
+    50% {height: 50%;opacity: .5;}
+    60% {height: 60%;opacity: .6;}
+    70% {height: 70%;opacity: .7;}
+    /* 80% {height: 80%;opacity: .8;} 
+    9% {height: 90%;opacity: .9;}  */
+    100%{height: inherit;opacity: 1;}
+
+}
+
 .navigator-menu{
-    display: none;
+    overflow: hidden;
+    opacity: 0;
     position: absolute;
-    /* right: 50px; */
     top: 65px;
     background-color: white;
     padding: 30px 30px;

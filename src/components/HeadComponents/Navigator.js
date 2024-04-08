@@ -2,21 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navigator() {
-  const [menuSelect, setMenuSelect] = useState("");
   return (
     <div className="navigator">
-      <h1
-        onMouseEnter={() => setMenuSelect("block")}
-        onMouseLeave={() => setMenuSelect("")}
-      >
-        Pages
-      </h1>
-      <div
-        className="navigator-menu"
-        onMouseEnter={() => setMenuSelect("block")}
-        onMouseLeave={() => setMenuSelect("")}
-        style={{ display: menuSelect }}
-      >
+      <h1>Pages</h1>
+      <div className="navigator-menu">
         <div className="navigator-choices">
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>

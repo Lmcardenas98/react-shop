@@ -5,10 +5,15 @@ export default function Banner() {
   const { cart, products } = useProviderCart();
   const [cont, setCont] = useState(0);
   let item = products?.filter((item) => item.id <= 2);
-
   useEffect(() => {
-    const timer = setTimeout(() => console.log("leo"), 1000);
-  }, []);
+    setInterval(() => {
+      let now = new Date();
+      if (now.getSeconds() % 15 === 1) {
+        setCont(1 - cont);
+      }
+    }, 1000);
+  });
+
   if (item) {
     return (
       <div className="banner-container">
