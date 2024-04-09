@@ -2,7 +2,7 @@
 @import url('/src/css/body.css');
 body{
 
-
+overflow-x: hidden;
   
 }
 

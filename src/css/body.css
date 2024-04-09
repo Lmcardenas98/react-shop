@@ -150,10 +150,8 @@
 .top-colection-cards-container{
     display: flex;
     max-width: 1024px;
-    /* overflow:hidden; */
     gap: 50px;
     align-items: center;
-    scroll-behavior: smooth;
     animation: scroll 45s linear infinite;
     animation-delay: 3s;
 }
@@ -172,6 +170,7 @@
     justify-content: center;
 }
 
+
 .collection-card{
     max-width: 350px;
     display: flex;
@@ -179,6 +178,8 @@
     justify-content: space-between;
     height: 100%;
     align-items: center;
+    width: 100%;
+    position: relative;
 }
 
 .collection-image{
@@ -196,8 +197,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
+
+.background-btn{
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    opacity: 1;
+    transition: all .4s;
+    display: grid;
+    place-content: center;
+    background-color: rgba(234, 234, 234, 0.518);
+}
+
+.collection-btn{
+    background-color: red;
+    color: white;
+    width: 120px;
+    height: 30px;
+    border-radius: 100px;
+    border: none;
+
+}
+
+.collection-card:hover .background-btn{
+    opacity: 1;
+    top: 160px;
+
+
+}
 
 /* body layouts */
 
@@ -266,6 +298,20 @@
 
 .card-see-more{
     position: relative;
+}
+
+/* deals section */
+
+.deals-img{
+    width: 100%;
+}
+
+.banner-item-description{
+    flex: 1
+}
+
+.deals-image {
+    flex: 1;
 }
 
 

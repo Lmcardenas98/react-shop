@@ -18,6 +18,9 @@ export default function SectionTopCollection() {
         <div className="top-colection-cards-container" ref={divRef}>
           {products?.map((item) => (
             <div className="collection-card">
+              <div className="background-btn">
+                <button className="collection-btn">ADD TO CART</button>
+              </div>
               <div className="collection-image-container">
                 <img className="collection-image" src={item.image}></img>
               </div>
