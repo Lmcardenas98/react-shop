@@ -5,15 +5,22 @@
 
 /* top categories */
 
-.section-top-categories{
-    
+
+ .section-top-categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.body-top-categories{
+
+ .body-top-categories{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
+    gap: 70px;
+}
+
+.top-categories-card{
+    flex: 1;
 }
 
 .top-categories-description{
@@ -26,7 +33,7 @@
     display: flex;
     justify-content: center;
     padding: 50px;
-}
+} 
 
 .category-main-image{
     max-width: 100px;
@@ -50,7 +57,6 @@
 }
 
 .secondary-image-container img{
-    /* aspect-ratio: 1, 1; */
     object-fit: contain;
 }
 
@@ -63,7 +69,6 @@
 
 .top-categories-card{
     border: var(--top-category-border);
-    width: 30%;
     border-radius: 1%;
 }
 
@@ -90,7 +95,7 @@
     border: 1px red solid;
     color: red;
     cursor: pointer;
-}
+}  
 
 /* Season sale section  */
 
@@ -136,6 +141,7 @@
     background-color: rgb(255, 55, 55);
     cursor: pointer;
     transition: all .3s;
+    color: white;
 }
 
 
@@ -211,7 +217,7 @@
     transition: all .4s;
     display: grid;
     place-content: center;
-    background-color: rgba(234, 234, 234, 0.518);
+    /* background-color: rgba(234, 234, 234, 0.518); */
 }
 
 .collection-btn{
@@ -233,13 +239,7 @@
 
 /* body layouts */
 
-.bodyBox{
-    margin: 50px 0px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    gap: 20px;   
-}
+
 
 .page-layouts{
     display: flex;
@@ -249,18 +249,25 @@
     
 }
 
-.section-top-categories{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 /* card  */
+
+
+.bodyBox{
+    margin: 50px 0px;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center; */
+    gap: 20px;   
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1024px;
+}
 
 .card-box{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex: 1 1 400px;
     border: 1px solid black;
     padding: 10px;
 }
@@ -292,10 +299,6 @@
     
 }
 
-.card-description.expando{
-    z-index: 9999;
-}
-
 .card-see-more{
     position: relative;
 }
@@ -307,11 +310,24 @@
 }
 
 .banner-item-description{
-    flex: 1
 }
 
 .deals-image {
-    flex: 1;
+    
+    position: relative;
+}
+
+.deals-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: move 3s infinite;
+    object-fit: contain;
+}
+
+@keyframes move {
+    0%{margin-top: 0}
+    50%{margin-top: 10px;}
 }
 
 
