@@ -7,7 +7,10 @@ export default function Head() {
   const { cart, setSearch, products } = useProviderCart();
 
   return (
-    <div className="header-container">
+    <div
+      className="header-container"
+      style={{ position: "sticky", top: 0, zIndex: 9999 }}
+    >
       <div className="headerBox">
         <div className="imageHead">
           <img src={logo} alt="logo" className="logo" />
@@ -32,7 +35,6 @@ export default function Head() {
           <b>cart items: {cart.length}</b>
         </div>
       </div>
-      <Banner />
     </div>
   );
 }

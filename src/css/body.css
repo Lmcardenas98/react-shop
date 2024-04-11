@@ -101,11 +101,21 @@
 .section-season-sale {
     display: grid;
     place-content: center;
-    background-image: url('../media/newbanner.jpg');
+    background: url('../media/newbanner.jpg');
     height: 30vh;
     color: white;
     position: relative;
     width: 100%;
+}
+
+.section-season-sale::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .season-sale-text {
@@ -159,8 +169,8 @@
     max-width: 1024px;
     gap: 50px;
     align-items: center;
-    animation: scroll 45s linear infinite;
-    animation-delay: 3s;
+    animation: scroll 60s linear infinite;
+    animation-delay: 4s;
 }
 
 
@@ -342,43 +352,23 @@
 
 
 @keyframes scroll {
-    10% {
-        margin-left: -73%
+    0% {
+        margin-left: 0%
     }
 
-    20% {
-        margin-left: -146%
-    }
-
-    30% {
-        margin-left: -219%
-    }
-
-    40% {
-        margin-left: -292%
-    }
-
-    50% {
+    25% {
         margin-left: -365%
     }
 
-    60% {
-        margin-left: -438%
+    50% {
+        margin-left: -730%
     }
 
-    70% {
-        margin-left: -511%
-    }
-
-    80% {
-        margin-left: -584%
-    }
-
-    90% {
-        margin-left: -657%
+    75% {
+        margin-left: -365%
     }
 
     100% {
-        margin-left: -730%
+        margin-left: -69%
     }
 }
