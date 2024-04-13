@@ -1,9 +1,12 @@
 @import url('/src/css/header.css');
 @import url('/src/css/body.css');
-body{
+@import url('/src/css/about.css');
+@import url('/src/css/navSide.css');
 
-overflow-x: hidden;
-  
+body {
+
+    overflow-x: hidden;
+
 }
 
 .login {
@@ -12,21 +15,21 @@ overflow-x: hidden;
     width: 100vw;
     height: 100vh;
     z-index: 1;
-    
+
     place-content: center;
 }
 
-.login-form{
+.login-form {
     display: grid;
     place-content: center;
 }
 
-.footerBox{
+.footerBox {
     display: flex;
     justify-content: center;
 }
 
-.section{
+.section {
     max-width: 1024px;
     margin: 80px auto;
 }

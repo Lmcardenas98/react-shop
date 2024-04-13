@@ -1,0 +1,20 @@
+.nav-side-bar {
+    position: fixed;
+    top: 55%;
+    right: 1%;
+    z-index: 9999;
+}
+
+.nav-side-bar div {
+    margin: 5px;
+    width: 3px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: .2;
+}
+
+.nav-side-bar div a {
+    width: 20px;
+    height: 20px;
+}
