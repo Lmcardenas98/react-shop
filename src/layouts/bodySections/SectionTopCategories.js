@@ -6,7 +6,11 @@ import TopCategories from "../../components/BodyComponents/TopCategories";
 export default function SectionTopCategories() {
   const { products, setProducts } = useProviderCart();
   return (
-    <div className="section-top-categories section">
+    <div
+      id="section-top-categories"
+      data-item="categories"
+      className="section-top-categories section obserb"
+    >
       <h1>Top categories</h1>
       <div className="body-top-categories">
         <TopCategories

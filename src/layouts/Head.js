@@ -9,7 +9,7 @@ export default function Head() {
   return (
     <div
       className="header-container"
-      style={{ position: "sticky", top: 0, zIndex: 9999 }}
+      // style={{ position: "sticky", top: 0, zIndex: 9999 }}
     >
       <div className="headerBox">
         <div className="imageHead">

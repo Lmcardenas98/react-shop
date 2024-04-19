@@ -8,7 +8,11 @@ export default function Banner() {
 
   if (item) {
     return (
-      <div className="banner-container" id="banner-container">
+      <div
+        className="banner-container obserb"
+        data-item="banner"
+        id="banner-container"
+      >
         <div className="head-banner banner1">
           <div className="banner-item-description item1">
             <h2

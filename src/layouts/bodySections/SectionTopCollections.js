@@ -12,7 +12,11 @@ export default function SectionTopCollection() {
   // }, []);
 
   return (
-    <div className="section-top-collection section">
+    <div
+      className="section-top-collection section obserb"
+      id="section-top-collection"
+      data-item="collection"
+    >
       <h1>Top Collections</h1>
       <div className="top-collection-container">
         <div className="top-colection-cards-container" ref={divRef}>

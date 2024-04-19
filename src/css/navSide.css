@@ -1,20 +1,37 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
 .nav-side-bar {
     position: fixed;
     top: 55%;
-    right: 1%;
+    right: 9%;
     z-index: 9999;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
 }
 
-.nav-side-bar div {
-    margin: 5px;
+.nav-side-bar a {
     width: 3px;
     height: 15px;
     background-color: black;
     border-radius: 50%;
     opacity: .2;
+    font-size: 0;
+
+
 }
 
-.nav-side-bar div a {
-    width: 20px;
-    height: 20px;
+.nav-side-bar a:hover {
+    opacity: 1 !important;
+    font-size: medium;
+}
+
+.nav-side-bar a p {
+    margin-top: -5px;
+    margin-left: 12px;
+
+
 }

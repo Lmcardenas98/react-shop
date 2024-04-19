@@ -6,7 +6,11 @@ export default function SectionDeals() {
   let img = products?.filter((item) => item.id === 3);
   if (img) {
     return (
-      <div className="section-deals-container">
+      <div
+        className="section-deals-container obserb"
+        data-item="deal"
+        id="section-deals-container"
+      >
         <div className="banner-container">
           <div className="head-banner">
             <div className="deals-item-description">
