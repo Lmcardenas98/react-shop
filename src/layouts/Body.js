@@ -3,6 +3,7 @@ import SectionTopCategories from "./bodySections/SectionTopCategories";
 import SectionTopCollection from "./bodySections/SectionTopCollections";
 import SectionDeals from "./bodySections/SectionsDeals";
 import Banner from "../components/HeadComponents/Banner";
+import SectionGetFollow from "./bodySections/SectionGetFollow";
 
 export default function Body() {
   return (
@@ -12,6 +13,7 @@ export default function Body() {
       <SectionSeasonSales />
       <SectionTopCollection />
       <SectionDeals />
+      <SectionGetFollow />
     </>
   );
 }

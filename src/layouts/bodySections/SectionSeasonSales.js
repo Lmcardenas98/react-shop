@@ -1,6 +1,10 @@
+import { useEffect, useState } from "react";
+
 export default function SectionSeasonSales() {
-  const text =
+  const [text, setText] = useState([]);
+  const sample =
     "Take 25% off all sweaters and knits. Discount applied at checkout.";
+
   return (
     <div
       className="section-season-sale obserb"
@@ -9,7 +13,7 @@ export default function SectionSeasonSales() {
     >
       <div className="season-sale-text">
         <h1>End of Season sale</h1>
-        <p>{text.slice(0, 10)}</p>
+        <p>{sample}</p>
         <button className="sale-btn">SHOP NOW</button>
       </div>
     </div>
