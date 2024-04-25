@@ -6,7 +6,22 @@
 }
 
 .navigator:hover .navigator-menu {
-    animation: nav-hover .1s linear forwards;
+    animation: te .2s ease-in-out forwards;
+
+
+}
+
+@keyframes te {
+    0% {
+        transform: rotateY(90deg);
+        height: 0px;
+    }
+
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+        height: inherit;
+    }
 }
 
 @keyframes nav-hover {
@@ -16,7 +31,7 @@
     }
 
     20% {
-        height: 20;
+        height: 20%;
         opacity: .2;
     }
 
@@ -60,8 +75,9 @@
     position: absolute;
     top: 65px;
     background-color: white;
-    padding: 30px 30px;
-    border: salmon solid 1px;
+    padding: 25px;
+    background-color: rgb(62, 60, 60);
+
 }
 
 .navigator-choices {
@@ -70,10 +86,26 @@
     gap: 6px;
 }
 
+.navigator-choices a:not(:last-child) {
+    border-bottom: 1px solid white;
+}
+
+.navigator-choices a {
+    text-decoration: none;
+    padding-bottom: 5px;
+    color: rgb(192, 192, 192);
+}
+
+.navigator-choices a:hover {
+    color: chocolate;
+}
+
 .headerBox {
     display: flex;
     justify-content: space-between;
     background-color: white;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 .logo {

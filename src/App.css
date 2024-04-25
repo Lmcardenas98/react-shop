@@ -3,10 +3,14 @@
 @import url('/src/css/about.css');
 @import url('/src/css/navSide.css');
 @import url('./css/footer.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
 
     overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -30,4 +34,24 @@ body {
 .section {
     max-width: 1024px;
     margin: 80px auto;
+}
+
+
+.span-grow::after {
+    content: '......';
+    max-width: 0px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: sub 1s infinite;
+    display: inline-flex;
+}
+
+@keyframes sub {
+    0% {
+        max-width: 0%;
+    }
+
+    100% {
+        max-width: 80px;
+    }
 }

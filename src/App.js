@@ -21,13 +21,20 @@ function App() {
 
     setTimeout(() => {
       setIsloading(false);
-    }, 2000);
+    }, 3000);
   }, []);
 
   if (isloading) {
     return (
-      <div>
-        <h1>Loading........</h1>
+      <div
+        style={{
+          display: "grid",
+          width: "100vw",
+          height: "100vh",
+          placeContent: "center",
+        }}
+      >
+        <h1 className="span-grow">Loading</h1>
       </div>
     );
   } else {
