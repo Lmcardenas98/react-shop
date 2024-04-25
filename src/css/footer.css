@@ -1,0 +1,44 @@
+.footerBox {
+    background-color: rgb(250, 250, 250);
+}
+
+.infomration {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.infomration-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* align-items: center; */
+}
+
+.infomration-box>a {
+    flex: 1;
+    cursor: pointer;
+}
+
+.infomration-box>a:hover {
+    text-decoration: underline;
+}
+
+.media-icon {
+    transition: all .3s;
+}
+
+.media-icon:hover {
+    fill: red;
+}
+
+.marca {
+    width: 100vw;
+    background-color: rgb(48, 48, 56);
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+
+}

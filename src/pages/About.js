@@ -6,7 +6,7 @@ export default function About() {
     <>
       <Layout>
         <div className="btn-test">
-          <div className="">
+          <div className="b">
             <button className="">boton 1</button>
           </div>
           <div className="b">

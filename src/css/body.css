@@ -396,6 +396,7 @@
     flex-basis: auto;
     max-width: 150px;
     position: relative;
+    padding: 5px;
 }
 
 .get-follow-item:after {
@@ -419,6 +420,7 @@
     width: 100%;
     height: 100%;
     aspect-ratio: 1;
+    object-fit: contain;
 }
 
 .heart {
@@ -440,6 +442,45 @@
     fill: red;
     cursor: pointer;
 }
+
+
+/* section newsletter */
+
+
+
+.newsletter-section {
+    flex-direction: column;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.submit-container input {
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+
+.submit-container input {
+    flex: 1;
+    max-width: 300px;
+}
+
+.submit-container button {
+    flex: 1;
+}
+
+.header-btn {
+    max-width: 170px;
+}
+
+.newsletter-header {
+    margin-bottom: 40px;
+}
+
 
 @keyframes move {
     0% {

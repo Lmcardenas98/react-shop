@@ -2,6 +2,7 @@
 @import url('/src/css/body.css');
 @import url('/src/css/about.css');
 @import url('/src/css/navSide.css');
+@import url('./css/footer.css');
 
 body {
 
@@ -24,10 +25,7 @@ body {
     place-content: center;
 }
 
-.footerBox {
-    display: flex;
-    justify-content: center;
-}
+
 
 .section {
     max-width: 1024px;

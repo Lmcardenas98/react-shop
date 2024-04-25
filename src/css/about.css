@@ -1,0 +1,16 @@
+.b {
+    max-width: 100px;
+    transition: all .5s;
+}
+
+.b button {
+    width: 100%;
+}
+
+.b button:hover {
+    transform: scale(1.3);
+}
+
+.btn-test:hover> :not(:hover) {
+    transform: scale(.8);
+}
